@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card, Col, Container, ListGroup, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, ListGroup, Row, Spinner } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import Header from '../shared/Header/Header';
 
@@ -13,6 +13,10 @@ const MyOrders = () => {
             .then(data => setOrders(data));
     }, [user.email])
     console.log(orders);
+
+    if (orders.length <= 0) {
+        return <div className="loader text-warning  "><Spinner className="" animation="border" /></div>
+    }
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure,You want to delete?');

@@ -26,7 +26,7 @@ const Dashboard = () => {
                         admin ?
                             <ul >
                                 <h4 className="nav-link ms-2">Hi, {user.displayName}</h4>
-                                <li>  <Link className="nav-link ms-2" to={`${url}/addproduct`}>Add Product</Link></li>
+                                <li>  <Link className="nav-link ms-1" to={`${url}/addproduct`}>Add Product</Link></li>
 
                                 <li> <Link className="nav-link ms-2" to={`${url}/manageproducts`}>Manage Products</Link> </li>
                                 <li><Link className="nav-link ms-2" to={`${url}/manageallorders`}>Manage All Orders</Link></li>
@@ -34,7 +34,7 @@ const Dashboard = () => {
                                 <li> <Button className="nav-link ms-2 " onClick={logOut}>Log Out</Button></li>
                             </ul>
                             :
-                            <ul >
+                            <ul className="my-5">
                                 <h4 className="nav-link ms-2">Hi, {user.displayName}</h4>
                                 <li>  <Link className="nav-link ms-2" to={`${url}/myorders`}>My Orders</Link></li>
 

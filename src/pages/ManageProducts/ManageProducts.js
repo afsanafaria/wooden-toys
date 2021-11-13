@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Button, Table } from 'react-bootstrap';
+import { Container, Button, Table, Spinner } from 'react-bootstrap';
 import Header from '../shared/Header/Header';
 
 const ManageProducts = () => {
@@ -12,6 +12,9 @@ const ManageProducts = () => {
             .then(data => setOrders(data))
     }, [])
 
+    if (orders.length <= 0) {
+        return <div className="loader text-warning"><Spinner className="" animation="border" /></div>
+    }
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure,You want to delete?');
         if (proceed) {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row, Spinner } from 'react-bootstrap';
 import Rating from 'react-rating';
 
 const HomeReview = () => {
@@ -12,6 +12,11 @@ const HomeReview = () => {
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
+
+
+    if (reviews.length <= 0) {
+        return <div className="loader text-warning"><Spinner className="" animation="border" /></div>
+    }
 
     return (
         <div>

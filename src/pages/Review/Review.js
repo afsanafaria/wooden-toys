@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Container, Form, Button } from 'react-bootstrap';
+import React from 'react';
+import { Container, Form, Button, Col } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import { useForm } from "react-hook-form";
 import Header from '../shared/Header/Header';
@@ -32,11 +32,11 @@ const Review = () => {
         <div className="review">
             <Header></Header>
             <Container className="">
-                <h1 className="text-warning my-4 ms-5 d-flex justify-content-center">Please Give a Review</h1>
+                <h1 className="text-warning my-4 ms-3 ">Please Give a Review</h1>
 
-                <Form onSubmit={handleSubmit(onSubmit)} className="w-50 ms-5">
+                <Form onSubmit={handleSubmit(onSubmit)} className="w-50 ms-3">
 
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3" as={Col} controlId="formGridEmail">
                         <Form.Label className="text-warning fw-bold">Name</Form.Label>
                         <Form.Control {...register("name")} defaultValue={user.displayName} className="" type="text" placeholder="Your Name" />
                     </Form.Group>
@@ -51,7 +51,7 @@ const Review = () => {
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                         <Form.Label className="text-warning fw-bold">Review</Form.Label>
-                        <Form.Control {...register("rating")} className="" type="number" placeholder="Rating between 1 to 5" />
+                        <Form.Control {...register("rating")} className="" type="number" placeholder="Rating between 1 to 5" required />
                     </Form.Group>
                     {/* <Rating className="border-0 text-warning mb-3"
                         emptySymbol="far fa-star fa-2x"

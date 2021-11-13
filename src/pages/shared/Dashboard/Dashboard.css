@@ -9,7 +9,10 @@
     
 }
 .board{
-    background-image: url('https://image.freepik.com/free-photo/top-view-wooden-kids-toys-with-copy-space_23-2148251526.jpg');
+    background-image: url('https://image.freepik.com/free-photo/colorful-baby-toys-white-background-frame-from-developing-wooden-blocks-cars-puzzles_113966-323.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+.dash-heading{
+    font-size:3rem;
 }

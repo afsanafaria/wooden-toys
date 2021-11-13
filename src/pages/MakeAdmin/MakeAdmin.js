@@ -6,6 +6,7 @@ import Header from '../shared/Header/Header';
 const MakeAdmin = () => {
     const { register, handleSubmit } = useForm();
 
+
     const onSubmit = data => {
         console.log(data)
         fetch(`https://vast-castle-60665.herokuapp.com/users`, {

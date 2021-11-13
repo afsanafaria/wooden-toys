@@ -57,7 +57,7 @@ const Purchase = () => {
                         </Card>
                     </Col>
                     <Col md={6}>
-                        <Card>
+                        <Card className="border-0">
                             <Form onSubmit={handleSubmit(onSubmit)}>
                                 {
                                     user.email &&

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Table, Button } from 'react-bootstrap';
+import { Container, Table, Button, Spinner } from 'react-bootstrap';
 import Header from '../shared/Header/Header';
 import './ManageAllOrders.css'
 
@@ -19,7 +19,9 @@ const ManageAllOrders = () => {
             .then(data => setOrders(data))
     }, [])
 
-
+    if (orders.length <= 0) {
+        return <div className="loader text-warning"><Spinner className="" animation="border" /></div>
+    }
 
     const updateOrderStatus = id => {
         fetch(`https://vast-castle-60665.herokuapp.com/users/${id}`)
@@ -81,7 +83,7 @@ const ManageAllOrders = () => {
             <Header></Header>
             <Container className=" mt-5" >
                 <div>
-                    <Table striped bordered hover responsive className="px-2 bg-white">
+                    <Table striped bordered hover responsive="sm" className="px-2 bg-white">
                         <thead>
                             <tr>
 

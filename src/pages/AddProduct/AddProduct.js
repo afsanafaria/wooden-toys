@@ -31,21 +31,21 @@ const AddProduct = () => {
                 <Form onSubmit={handleSubmit(onSubmit)} className="p-5 add-product-form">
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Product Name</Form.Label>
-                        <Form.Control {...register("productName")} type="text" placeholder="Enter product name" />
+                        <Form.Control {...register("productName")} type="text" placeholder="Enter product name" required />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Product Price</Form.Label>
-                        <Form.Control {...register("productPrice")} type="number" placeholder="Enter product price" />
+                        <Form.Control {...register("productPrice")} type="number" placeholder="Enter product price" required />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Product Description</Form.Label>
-                        <Form.Control {...register("description")} type="text" placeholder="Enter description" />
+                        <Form.Control {...register("description", { required: true, minLength: 130 })} type="text" placeholder="Enter description" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Product Image </Form.Label>
-                        <Form.Control {...register("productImg")} type="text" placeholder="Enter Image URL" />
+                        <Form.Control {...register("productImg")} type="text" placeholder="Enter Image URL" required />
                     </Form.Group>
-                    <Button className="bg-warning text-white" type="submit">Submit</Button>
+                    <Button className="bg-warning text-white border-0" type="submit">Submit</Button>
                 </Form>
             </Container>
         </div>

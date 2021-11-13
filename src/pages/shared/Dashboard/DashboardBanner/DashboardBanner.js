@@ -1,6 +1,7 @@
 import React from 'react';
 import useAuth from '../../../../hooks/useAuth';
 import Header from '../../Header/Header';
+import { Container } from 'react-bootstrap';
 import './DashboardBanner'
 
 const DashboardBanner = () => {
@@ -8,7 +9,9 @@ const DashboardBanner = () => {
     return (
         <div className="dashboard-banner">
             <Header></Header>
-            <h1 className="text-end text-warning home-heading mt-lg-4 ">Welcome {user.displayName}<br /> in our Peggy Store</h1>
+            <Container>
+                <h1 className="text-wrap text-warning text-center dash-heading mt-lg-4 ">Welcome {user.displayName}<br /> in our Piggy Store</h1>
+            </Container>
         </div>
     );
 };

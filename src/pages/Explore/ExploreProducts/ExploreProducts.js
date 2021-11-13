@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Spinner } from 'react-bootstrap';
 import Footer from '../../shared/Footer/Footer';
 import Header from '../../shared/Header/Header';
 import Product from '../Product/Product';
+import './ExploreProducts.css'
 
 const ExploreProducts = () => {
     const [products, setProducts] = useState([]);
+
+
 
     useEffect(() => {
         fetch('https://vast-castle-60665.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
+    if (products.length <= 0) {
+        return <div className="loader text-warning"><Spinner className="" animation="border" /></div>
+    }
     return (
         <div>
             <Header></Header>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Col, Image, Row, Button } from 'react-bootstrap';
+import { Card, Col, Image, Row, Button, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Products = () => {
@@ -10,6 +10,10 @@ const Products = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
+
+    if (products.length <= 0) {
+        return <div className="loader text-warning"><Spinner className="" animation="border" /></div>
+    }
     return (
         <div>
             <h1 className="text-center text-warning my-4">Products</h1>
@@ -24,7 +28,7 @@ const Products = () => {
                                         <h6 className="my-3">Price: {product.productPrice}$</h6>
                                     </Card.Title>
                                     <Card.Text>
-                                        {product.description.slice(0, 130)}......
+                                        {product.description.slice(0, 120)}......
 
                                     </Card.Text>
                                     <Link to={`/purchase/${product._id}`}><Button variant="warning" className="text-white">Purchase</Button></Link>
