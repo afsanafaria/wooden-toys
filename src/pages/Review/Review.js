@@ -32,33 +32,34 @@ const Review = () => {
         <div className="review">
             <Header></Header>
             <Container className="">
-                <h1 className="text-warning my-4 ms-3 ">Please Give a Review</h1>
+                <Col md={7} className="">
 
-                <Form onSubmit={handleSubmit(onSubmit)} className="w-50 ms-3">
 
-                    <Form.Group className="mb-3" as={Col} controlId="formGridEmail">
-                        <Form.Label className="text-warning fw-bold">Name</Form.Label>
-                        <Form.Control {...register("name")} defaultValue={user.displayName} className="" type="text" placeholder="Your Name" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                        <Form.Label className="text-warning fw-bold">Email address</Form.Label>
-                        <Form.Control {...register("email")} defaultValue={user.email} className="" type="email" placeholder="name@example.com" />
-                    </Form.Group>
+                    <Form onSubmit={handleSubmit(onSubmit)} className=" ms-3">
+                        <h1 className="fw-bold text-warning mt-5  ">Please Give a Review</h1>
+                        <Form.Group className="mb-3" as={Col} controlId="formGridEmail">
+                            <Form.Label className="text-warning fw-bold">Name</Form.Label>
+                            <Form.Control {...register("name")} defaultValue={user.displayName} className="" type="text" placeholder="Your Name" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Label className="text-warning fw-bold">Email address</Form.Label>
+                            <Form.Control {...register("email")} defaultValue={user.email} className="" type="email" placeholder="name@example.com" />
+                        </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                        <Form.Label className="text-warning fw-bold">Review</Form.Label>
-                        <Form.Control {...register("review", { required: true, minLength: 20 })} as="textarea" rows={3} />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                        <Form.Label className="text-warning fw-bold">Rating</Form.Label>
-                        <Form.Control {...register("rating")} className="" type="number" placeholder="Rating between 1 to 5" required />
-                    </Form.Group>
-                    {/* <Rating className="border-0 text-warning mb-3"
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label className="text-warning fw-bold">Review</Form.Label>
+                            <Form.Control {...register("review", { required: true, minLength: 20 })} as="textarea" rows={3} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label className="text-warning fw-bold">Rating</Form.Label>
+                            <Form.Control {...register("rating")} className="" type="number" placeholder="Rating between 1 to 5" required />
+                        </Form.Group>
+                        {/* <Rating className="border-0 text-warning mb-3"
                         emptySymbol="far fa-star fa-2x"
                         fullSymbol="fas fa-star fa-2x"
                         fractions={2}
                     /> */}
-                    {/* <Form.Control
+                        {/* <Form.Control
                         control={
                             <>
                                 <input
@@ -87,12 +88,12 @@ const Review = () => {
                         fullSymbol="fas fa-star fa-2x"
 
                     /> */}
-                    <br />
-                    <Button className="text-white" variant="warning" type="submit">
-                        Submit
-                    </Button>
-                </Form>
-
+                        <br />
+                        <Button className="text-white" variant="warning" type="submit">
+                            Submit
+                        </Button>
+                    </Form>
+                </Col>
             </Container>
         </div >
     );
