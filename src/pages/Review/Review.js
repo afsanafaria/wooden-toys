@@ -50,7 +50,7 @@ const Review = () => {
                         <Form.Control {...register("review", { required: true, minLength: 20 })} as="textarea" rows={3} />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                        <Form.Label className="text-warning fw-bold">Review</Form.Label>
+                        <Form.Label className="text-warning fw-bold">Rating</Form.Label>
                         <Form.Control {...register("rating")} className="" type="number" placeholder="Rating between 1 to 5" required />
                     </Form.Group>
                     {/* <Rating className="border-0 text-warning mb-3"
