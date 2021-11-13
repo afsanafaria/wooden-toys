@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
+import Rating from 'react-rating';
 
 const HomeReview = () => {
     const [reviews, setReviews] = useState([])
@@ -23,8 +24,17 @@ const HomeReview = () => {
                         reviews.map(review => (
                             <>
                                 <Col className="">
-                                    <Card className="text-center text-warning fw-bold border-0 pt-4">
+                                    <Card className="text-center text-muted fw-bold border-0 pt-4">
                                         <h4>{review.name} says</h4>
+                                        <h6>
+                                            <Rating className="text-warning"
+                                                emptySymbol="far fa-star "
+                                                fullSymbol="fas fa-star "
+                                                fractions={2}
+                                                initialRating={review.rating}
+                                                readonly
+                                            />
+                                        </h6>
                                         <Card.Body>
 
                                             <Card.Text>

@@ -9,7 +9,7 @@ const Gallery = () => {
             <Row className="w-100 mx-auto">
                 <Col md={6}>
                     <img className="w-100"
-                        src="https://thumbs.dreamstime.com/b/creative-eco-wooden-toys-baby-und-kids-made-organic-wood-childrens-educational-friendly-shop-store-car-abstract-playground-159905795.jpg"
+                        src="https://kidslovewhat.com/wp-content/uploads/2019/08/wooden-toys-for-kids.jpg"
 
                         alt=""
                     />
