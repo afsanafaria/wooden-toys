@@ -30,7 +30,7 @@ const AddProduct = () => {
             <Container>
 
                 <Col md={7} className="">
-                    <Form onSubmit={handleSubmit(onSubmit)} className="p-5 add-product-form">
+                    <Form onSubmit={handleSubmit(onSubmit)} className="px-2 ps-lg-5 mt-5 add-product-form">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Product Name</Form.Label>
                             <Form.Control {...register("productName")} type="text" placeholder="Enter product name" required />

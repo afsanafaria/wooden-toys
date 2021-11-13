@@ -35,7 +35,7 @@ const Review = () => {
                 <Col md={7} className="">
 
 
-                    <Form onSubmit={handleSubmit(onSubmit)} className=" ms-3">
+                    <Form onSubmit={handleSubmit(onSubmit)} className="px-2 ps-lg-5 ms-2">
                         <h1 className="fw-bold text-warning mt-5  ">Please Give a Review</h1>
                         <Form.Group className="mb-3" as={Col} controlId="formGridEmail">
                             <Form.Label className="text-warning fw-bold">Name</Form.Label>

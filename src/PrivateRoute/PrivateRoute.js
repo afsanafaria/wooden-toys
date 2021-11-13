@@ -5,7 +5,7 @@ import useAuth from '../hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
     const { user, isLoading } = useAuth();
-    if (isLoading) { return <Spinner animation="border" variant="warning" /> }
+    if (isLoading) { return <div className="loader text-warning"><Spinner className="" animation="border" /></div> }
     return (
         <Route
             {...rest}
