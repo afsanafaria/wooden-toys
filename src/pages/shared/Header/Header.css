@@ -1,0 +1,14 @@
+.nav-link{
+    list-style: none;
+    color: white!important;
+    font-weight: 600;
+    font-size: larger;
+}
+.logo-name{
+    color: white!important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+li{
+    list-style: none;
+}
