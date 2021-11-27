@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className="footer bg-warning">
             <Container>
-                <Row className="w-100 mt-5 pt-5 ">
+                <Row className="w-100 pt-5 ">
                     <Col md={4}>
                         <h4 className="mx-3">Get Set Go</h4>
                         <ul>

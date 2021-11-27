@@ -38,7 +38,7 @@ const useFirebase = () => {
         }).then(() => {
         }).catch((error) => {
         });
-        history.replace('/');
+        history.replace('/exploreproducts');
       })
       .catch((error) => {
         setError(error.message);

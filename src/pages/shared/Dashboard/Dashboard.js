@@ -24,7 +24,7 @@ const Dashboard = () => {
 
                     {
                         admin ?
-                            <ul >
+                            <ul className="py-3">
                                 <h4 className="nav-link ms-2">Hi, {user.displayName}</h4>
                                 <li>  <Link className="nav-link ms-1" to={`${url}/addproduct`}>Add Product</Link></li>
 
@@ -34,11 +34,10 @@ const Dashboard = () => {
                                 <li> <Button className="nav-link ms-2 " onClick={logOut}>Log Out</Button></li>
                             </ul>
                             :
-                            <ul className="my-5">
+                            <ul className="py-3">
                                 <h4 className="nav-link ms-2">Hi, {user.displayName}</h4>
                                 <li>  <Link className="nav-link ms-2" to={`${url}/myorders`}>My Orders</Link></li>
-
-                                <li> <Link className="nav-link ms-2" to={`${url}/pay`}>Pay</Link> </li>
+                                {/* <li> <Link className="nav-link ms-2" to={`${url}/pay`}>Pay</Link> </li> */}
                                 <li><Link className="nav-link ms-2" to={`${url}/review`}>Review</Link></li>
                                 <li> <Button className="nav-link ms-2" onClick={logOut}>Log Out</Button></li>
                             </ul>
