@@ -6,7 +6,7 @@ Please have a visit [Piggy Store](https://piggy-store-7c6c0.web.app/).
 
 This Website contains toys for babies.By this toys the babies will have knowledge of mathematics,science,english,bangla and so on.
 
-### Why Us?
+### Important Info?
 
   * Developed with React and react-bootstrap and firebase implementation.
   * Also used environment variable.
