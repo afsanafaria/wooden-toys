@@ -8,8 +8,14 @@ This Website contains toys for babies.By this toys the babies will have knowledg
 
 ### Why Us?
 
-  * We will provide best wood for the toys.
-  * These will long-last.
-  * We also have extra protectionof these wood.
-  * You can have vouchar if you order within a month.
-  * You will have one extra toy if you order five toys.
+  * Developed with React and react-bootstrap and firebase implementation.
+  * Also used environment variable.
+  * Have used Private Route and Admin Route. 
+  * Created a dashboard for users and for the admin panel. An admin can visit all products and also the products which are ordered by users.
+  * For checking admin Panel ,Please use email: admin@admin.com   Pass:123456
+  * The admin can manage the orders and the products.
+  * The admin can add more products as well.
+  * Tha admin can make another user admin.
+  * For checking normal user ,Please use email: mifrah@gmail.com   Pass:123456
+  * The user can add his/her orders
+  * The user can also give review.
