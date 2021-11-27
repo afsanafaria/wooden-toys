@@ -20,8 +20,8 @@ const HomeReview = () => {
 
     return (
         <div>
-            <h1 className="text-center text-warning my-4">Our Clients</h1>
-            <Container fluid>
+            <h1 className="text-center text-warning pt-5 my-4">Our Clients</h1>
+            <Container >
                 <Row className="w-100 g-4" xs={1} md={2} >
 
 
